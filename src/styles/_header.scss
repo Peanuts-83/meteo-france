@@ -1,22 +1,102 @@
+// * {
+//     border: 1px dashed red;
+// }
+
 #header_top {
     padding: 12px 0;
 }
 
 #header_top_left {
-    margin-right: 15px;
     display: flex;
-    .marianne {
+    justify-content: start;
+    padding: 0;
+
+    .marianne,
+    .logo {
         float: left;
-        margin-right: 20px;
+        width: auto;
+        margin: 0;
+        margin-right: 10px;
     }
+
 }
 
 #header_top_middle {
     margin-right: 15px;
+    margin-left: 0;
+    justify-content: start;
 }
 
 #header_top_right {
     align-items: center;
     display: flex;
+    font-size: 22px;
+    color: grey;
 }
 
+#socialmedia {
+    display: flex;
+    flex-wrap: nowrap;
+
+    * {
+        margin-left: 10px;
+        padding: 10px;
+        font-size: 18px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            color: $pink;
+        }
+    }
+}
+
+#carte_vigilance {
+    margin: 0 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.block_vigilance {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+
+    .fa-exclamation-triangle {
+        color: $yellow;
+        font-size: 18px;
+    }
+
+    .label {
+        color: $blue;
+        max-width: 60px;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: "Quicksand", sans-serif;
+        margin: 5px 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:325px) {
+
+}
+@media screen and (max-width:656px) {
+
+}
+@media screen and (min-width:1294px) and (min-height: 630px) {
+
+}
+@media screen and (min-width:1720px) and (min-height: 980px) {
+
+}
+@media screen and (min-width:1600px) {
+
+}

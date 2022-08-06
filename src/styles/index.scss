@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "./variables";
 @import "./header";
 
-$fa-font-path: "./webfonts";
 
 html,
 body,
@@ -105,32 +104,35 @@ main {
     position: relative;
 }
 
-#search_form_input {
-    height: 45px;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 12px;
-    font-weight: 500;
-    color: #003661;
+.block_search_form {
+    display: flex;
     border: solid 1px #dee2e6;
+    border-radius: 5px;
     width: 460px;
     max-width: 100%;
-}
-
-.block_search_form button::after {
-    // content: "\f002";
-    // font-family: "fa";
-    font: var(--fa-font-path);
-    content: "\f002";
-    font-weight: 400;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: block;
-    font-size: 15px;
-    color: #9b9b9b;
-    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 0;
+    .search_form_input {
+        flex-grow: 2;
+        height: 45px;
+        padding-left: 15px;
+        font-size: 12px;
+        font-weight: 500;
+        color: $blue;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+    .search_form_submit {
+        background: transparent;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        color: grey;
+        &:hover {
+            color: $blue;
+            cursor: pointer;
+        }
+    }
 }

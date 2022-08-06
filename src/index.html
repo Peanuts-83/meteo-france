@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="~/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/58b26ec2f8.js" crossorigin="anonymous"></script>
+
+
     <title>PREVISIONS METEO FRANCE - Site Officiel de Météo-France - Prévisions gratuites à 15 jours sur la France et sur le monde</title>
 <script defer src="main.bundle.js"></script></head>
 <body>
     <main id="page_wrapper">
         <header id="header">
-            <section id="header-top">
+            <section id="header_top">
                 <div class="container">
                    <div class="row">
                     <div id="header_top_left">
@@ -26,15 +29,27 @@
                             </a>
                         </figure>
                     </div>
-                    <div id="header_top_middle">
+                    <div id="header_top_middle" class="row">
                         <div id="block_search" class="block">
                             <form class="block_search_form">
-                                <input type="text" placeholder="Rechercher une ville, un pays..." id="search_form_input">
-                                <button type="submit" title="Lancer la recherche" aria-label="Lancer la recherche"><i class="fa-solid fa-user"></i></button>
+                                <input type="text" placeholder="Rechercher une ville, un pays..." class="search_form_input">
+                                <button class="search_form_submit" type="submit" title="Lancer la recherche" aria-label="Lancer la recherche"><i class="fas fa-search"></i></button>
                             </form>
                         </div>
+                        <nav id="socialmedia">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-linkedin"></i>
+                        </nav>
                     </div>
-                    <div id="header_top_right"></div>
+                    <div id="header_top_right">
+                        <i class="fas fa-bell"></i>
+                        <img src="./assets/img/carte_vigilance.png" alt="Carte vigilance" title="Carte vigilance" id="carte_vigilance">
+                        <div class="block_vigilance" role="alert">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p class="label">Vigilance météo</p>
+                        </div>
+                    </div>
                    </div>
                 </div>
             </section>
