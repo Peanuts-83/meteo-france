@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "./header";
+
+$fa-font-path: "./webfonts";
+
+html,
+body,
+#header,
+#sidebar_nav,
+#sidebar_overlay,
+#main {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+body {
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    padding-top: 180px;
+}
+
+// SECTIONS
+
+#header {
+    display: block;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: all .3s ease-in-out;
+    transform: translateY(0px);
+}
+
+#sidebar_page {
+    display: block;
+    position: fixed;
+    width: 320px;
+    top: 0;
+    bottom: 0;
+    right: -320px;
+    z-index: 1001;
+    background-color: white;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+#sidebar_overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 320px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    background-color: rgba($color: #000000, $alpha: .5);
+    top: 0;
+    left: 0;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+#main {
+    background-color: red;
+}
+
+#footer {
+    margin-top: 20px;
+}
+
+// UTILS
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container {
+    max-width: 1140px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    position: relative;
+}
+
+#search_form_input {
+    height: 45px;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #003661;
+    border: solid 1px #dee2e6;
+    width: 460px;
+    max-width: 100%;
+}
+
+.block_search_form button::after {
+    // content: "\f002";
+    // font-family: "fa";
+    font: var(--fa-font-path);
+    content: "\f002";
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    font-size: 15px;
+    color: #9b9b9b;
+    cursor: pointer;
+}

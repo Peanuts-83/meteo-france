@@ -1,0 +1,22 @@
+#header_top {
+    padding: 12px 0;
+}
+
+#header_top_left {
+    margin-right: 15px;
+    display: flex;
+    .marianne {
+        float: left;
+        margin-right: 20px;
+    }
+}
+
+#header_top_middle {
+    margin-right: 15px;
+}
+
+#header_top_right {
+    align-items: center;
+    display: flex;
+}
+
