@@ -1,4 +1,21 @@
-// $fa-font-path: "./webfonts";
+
 $blue: #003661;
+$blueLight: #145e9a;
 $pink: #db0084;
 $yellow: #ffb82b;
+$lightgrey: #ccc;
+
+// animations
+@keyframes arrow {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 10px;
+    }
+
+    100% {
+        left: 0;
+    }
+}

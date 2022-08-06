@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import "./variables";
 @import "./header";
+@import "./main";
 
 
 html,
@@ -75,7 +76,14 @@ main {
 }
 
 #main {
-    background-color: red;
+    margin: 30px 0;
+
+    section {
+        margin: 15px 0;
+        background-color: white;
+        padding: 0 20px;
+        border-radius: 5px;
+    }
 }
 
 #footer {
@@ -84,10 +92,32 @@ main {
 
 // UTILS
 
+a {
+    color: $blue;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        color: $pink;
+    }
+}
+
+.is-active {
+    * {
+        color: $pink;
+    }
+}
+
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.row_main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
 }
 
 .col {
@@ -95,6 +125,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+}
+
+.col_main {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-items: stretch;
+
 }
 
 .container {
@@ -112,6 +150,7 @@ main {
     max-width: 100%;
     margin-right: 20px;
     margin-left: 0;
+
     .search_form_input {
         flex-grow: 2;
         height: 45px;
@@ -120,19 +159,23 @@ main {
         font-weight: 500;
         color: $blue;
         border: none;
+
         &:focus {
             outline: none;
         }
     }
+
     .search_form_submit {
         background: transparent;
         border: none;
         padding: 10px;
         font-size: 16px;
         color: grey;
+
         &:hover {
             color: $blue;
             cursor: pointer;
         }
     }
 }
+

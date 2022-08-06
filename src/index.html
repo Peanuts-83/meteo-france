@@ -1,65 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="~/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/58b26ec2f8.js" crossorigin="anonymous"></script>
+    <title>PREVISIONS METEO FRANCE - Site Officiel de Météo-France - Prévisions gratuites à 15 jours sur la France et
+        sur le monde</title>
+    <script defer src="main.bundle.js"></script>
+</head>
 
-
-    <title>PREVISIONS METEO FRANCE - Site Officiel de Météo-France - Prévisions gratuites à 15 jours sur la France et sur le monde</title>
-<script defer src="main.bundle.js"></script></head>
 <body>
     <main id="page_wrapper">
         <header id="header">
             <section id="header_top">
                 <div class="container">
-                   <div class="row">
-                    <div id="header_top_left">
-                        <figure class="marianne">
-                            <a href="/">
-                                <img src="./assets/img/marianne.svg" alt="Marianne"
-                                height="80px">
-                            </a>
-                        </figure>
-                        <figure class="logo">
-                            <a href="/">
-                                <img src="./assets//img/logo_small_0.png" alt="Logo" height="80px">
-                            </a>
-                        </figure>
-                    </div>
-                    <div id="header_top_middle" class="row">
-                        <div id="block_search" class="block">
-                            <form class="block_search_form">
-                                <input type="text" placeholder="Rechercher une ville, un pays..." class="search_form_input">
-                                <button class="search_form_submit" type="submit" title="Lancer la recherche" aria-label="Lancer la recherche"><i class="fas fa-search"></i></button>
-                            </form>
+                    <div class="row">
+                        <div id="header_top_left">
+                            <figure class="marianne">
+                                <a href="/">
+                                    <img src="./assets/img/marianne.svg" alt="Marianne" height="80px">
+                                </a>
+                            </figure>
+                            <figure class="logo">
+                                <a href="/">
+                                    <img src="./assets//img/logo_small_0.png" alt="Logo" height="80px">
+                                </a>
+                            </figure>
                         </div>
-                        <nav id="socialmedia">
-                            <i class="fab fa-facebook-f"></i>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-linkedin"></i>
-                        </nav>
-                    </div>
-                    <div id="header_top_right">
-                        <i class="fas fa-bell"></i>
-                        <img src="./assets/img/carte_vigilance.png" alt="Carte vigilance" title="Carte vigilance" id="carte_vigilance">
-                        <div class="block_vigilance" role="alert">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <p class="label">Vigilance météo</p>
+                        <div id="header_top_middle" class="row">
+                            <div id="block_search" class="block">
+                                <form class="block_search_form">
+                                    <input type="text" placeholder="Rechercher une ville, un pays..."
+                                        class="search_form_input">
+                                    <button class="search_form_submit" type="submit" title="Lancer la recherche"
+                                        aria-label="Lancer la recherche"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                            <nav id="socialmedia">
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-linkedin"></i>
+                            </nav>
+                        </div>
+                        <div id="header_top_right">
+                            <i class="fas fa-bell"></i>
+                            <img src="./assets/img/carte_vigilance.png" alt="Carte vigilance"
+                                title="Vigilance Météo-France" id="carte_vigilance">
+                            <div class="block_vigilance" role="alert">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <p class="label">Vigilance météo</p>
+                                <div id="tooltip_vigilance">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Soyez très vigilant</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                   </div>
                 </div>
             </section>
-            <section id="header-middle"></section>
-            <section id="header-bottom"></section>
+            <section id="header_middle">
+                <div class="container">
+                    <div class="row">
+                        <nav id="block_menu_principal" class="block block_menu navigation">
+                            <ul>
+                                <li class="menu_icon is-active">
+                                    <a href="/" title="Prévision Météo-France"">
+                                        <i class=" fa fa-cloud-sun"></i>
+                                        <p>Previsions</p>
+                                    </a>
+                                </li>
+                                <li class="menu_icon">
+                                    <a href="/" title="Météo des plages">
+                                        <i class="fa fa-umbrella-beach"></i>
+                                        <p>Meteo des plages</p>
+                                    </a>
+                                </li>
+                                <li class="menu_icon">
+                                    <a href="/" title="Météo marine">
+                                        <i class="fa fa-water"></i>
+                                        <p>Meteo marine</p>
+                                    </a>
+                                </li>
+                                <li class="menu_icon">
+                                    <a href="/" title="Météo montagne">
+                                        <i class="fa fa-mountain"></i>
+                                        <p>Meteo montagne</p>
+                                    </a>
+                                </li>
+                                <li class="menu_icon">
+                                    <a href="/" title="Climat et changement climatique">
+                                        <i class="fa fa-globe-europe"></i>
+                                        <p>Climat</p>
+                                        <span class="fa fa-angle-down"></span>
+                                    </a>
+                                    <div class="menu_container" id="menu_climat">
+                                        <ul class="menu-grid menu_row">
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Tendances à trois mois</a></li>
+                                                    <li class="text_menu"><a href="#">Tendances à trois mois</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Comprendre le climat</a></li>
+                                                    <li class="text_menu"><a href="#">Le climat mondial</a></li>
+                                                    <li class="text_menu"><a href="#">Le climat en France</a></li>
+                                                    <li class="text_menu"><a href="#">Etudier le climat passé</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Le changement climatique</a></li>
+                                                    <li class="text_menu"><a href="#">Observer le changement
+                                                            climatique</a></li>
+                                                    <li class="text_menu"><a href="#">Quel climat futur?</a></li>
+                                                    <li class="text_menu"><a href="#">Climat HD</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Normales et relevés</a></li>
+                                                    <li class="text_menu"><a href="#">Normales et records</a></li>
+                                                    <li class="text_menu"><a href="#">Relevés météorologiques</a></li>
+                                                    <li class="text_menu"><a href="#">Buletins climatologiques</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu_icon">
+                                    <a href="/" title="Actualités météo & dossiers">
+                                        <i class="fa fa-newspaper"></i>
+                                        <p>Actus & dossiers</p>
+                                        <span class="fa fa-angle-down"></span>
+                                    </a>
+                                    <div class="menu_container" id="menu_actus">
+                                        <ul class="menu-grid menu_row">
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Actualités</a></li>
+                                                    <li class="text_menu"><a href="#">A la une</a></li>
+                                                    <li class="text_menu"><a href="#">Infos prévisions</a></li>
+                                                    <li class="text_menu"><a href="#">Infos climat</a></li>
+                                                    <li class="text_menu"><a href="#">Planète</a></li>
+                                                    <li class="text_menu"><a href="#">Entretiens</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Comprendre la météo</a></li>
+                                                    <li class="text_menu"><a href="#">Les saisons</a></li>
+                                                    <li class="text_menu"><a href="#">Le vent</a></li>
+                                                    <li class="text_menu"><a href="#">La température</a></li>
+                                                    <li class="text_menu"><a href="#">L'atmosphère</a></li>
+                                                    <li class="text_menu"><a href="#">Les précipitations</a></li>
+                                                    <li class="text_menu"><a href="#">Les orages</a></li>
+                                                    <li class="text_menu"><a href="#">Les nuages</a></li>
+                                                    <li class="text_menu"><a href="#">Arc-en-ciel et mirages</a></li>
+                                                    <li class="text_menu"><a href="#">Les océans</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Magazine</a></li>
+                                                    <li class="text_menu"><a href="#">Météo et histoire</a></li>
+                                                    <li class="text_menu"><a href="#">La météo en questions</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col"></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu_icon">
+                                    <a href="/" title="Offres et services de Météo France">
+                                        <i class="fa fa-user-plus"></i>
+                                        <p>Nos services</p>
+                                    </a>
+                                </li>
+                                <li class="menu_icon is-active" id="burger_menu">
+                                    <a href="/" title="Nos services" class="fa fa-bars"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section id="header_bottom">
+                <div class="container">
+                    <div class="block_bottom_nav">
+                        <span title="ajouter une ville" id="add_city">
+                            <p>Ajouter une ville</p>
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+            </section>
         </header>
         <aside id="sidebar_page">sidebar</aside>
         <button id="sidebar_overlay">btn sidebar overlay</button>
-        <main id="main" class="container">main</main>
+        <main id="main" class="container">
+            <section>
+                <div class="row alert">
+                    <div class="alert_content">
+                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                        <p>
+                            Danger de feux de végétation dans le sud de la France
+                        </p>
+
+                    </div>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+            </section>
+            <section>
+                <div class="row_main">
+                    <div class="col">
+                        <div class="vigilance_main">
+                            <p class="vigilance_text">
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <span>VIGILANCE ORANGE EN COURS</span>
+                            </p>
+                            <p class="vigilance_btn">
+                                <span>Consulter</span>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                        <div class="col_main">
+                            <h1 class="main_title">METEO FRANCE</h1>
+                        </div>
+                    </div>
+                    <div class="col">
+                        bbb
+                    </div>
+                </div>
+            </section>
+        </main>
         <footer id="footer">footer</footer>
     </main>
 </body>
+
 </html>
