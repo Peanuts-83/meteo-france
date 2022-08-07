@@ -32,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0;
+    margin: 10px 0;
     border-radius: 5px;
     border: 1px solid $lightgrey;
     width: 100%;
@@ -116,7 +116,7 @@
         }
     }
 
-    .map {
+    .carte {
         position: relative;
         width: 100%;
         height: 550px;
@@ -214,6 +214,7 @@
         overflow: hidden;
         width: fit-content;
         height: fit-content;
+        cursor: pointer;
 
         img {
             width: 101%;
@@ -230,7 +231,7 @@
             overflow: hidden;
             width: 100%;
             height: 98%;
-            background-color: rgba(0,0,0,.3);
+            background-color: rgba(0, 0, 0, .3);
         }
 
         &::after {
@@ -269,5 +270,93 @@
                 color: $blueSuperLight;
             }
         }
+    }
+}
+
+.card {
+    position: relative;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid $lightgrey;
+    cursor: pointer;
+
+    &:hover>.card_txt .pastille_arrow {
+        background-color: $pink;
+    }
+
+    &:hover>.img_container img {
+        transform: scale(110%);
+    }
+
+    img {
+        height: 100%;
+        transition: all .3s ease-in-out;
+    }
+
+    .pastille {
+        position: absolute;
+        top: 0;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: $pink;
+        color: white;
+        width: fit-content;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .card_txt {
+        position: relative;
+        padding: 10px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        color: grey;
+        background-color: white;
+
+        strong {
+            color: $blue;
+        }
+
+        .pastille_arrow {
+            position: absolute;
+            top: -25px;
+            right: 0;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $blueLight;
+            color: white;
+            padding: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+.card_multi {
+    .dots {
+        display: flex;
+        justify-content: center;
+    }
+    .dot {
+        margin: 10px;
+        padding: 3px;
+        border: 1px solid $lightgrey;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: $pink;
+        }
+    }
+
+    .dot-active {
+        background-color: $pink;
+        border: 2px solid $pink;
     }
 }

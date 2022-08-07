@@ -132,6 +132,10 @@ a {
 
 }
 
+.spacer {
+    margin: 10px;
+}
+
 .container {
     max-width: 1140px;
     margin-right: auto !important;
@@ -183,4 +187,5 @@ a {
     background-color: white;
     border: 1px solid grey;
     border-radius: 5px;
+    cursor: pointer;
 }
