@@ -6,24 +6,23 @@
         animation: arrow 1s ease-in-out infinite;
     }
 
+    .fa {
+        font-size: 20px;
+    }
+
+    .fa-arrow-right {
+        position: relative;
+        left: 0;
+    }
+
     .alert_content {
         display: flex;
         align-items: center;
-        font-size: 14px;
-        font-weight: bolder;
+        font-size: 13px;
+        font-weight: 700;
 
         * {
             padding-right: 10px;
-        }
-
-        .fa {
-            font-size: 20px;
-        }
-
-        .fa-arrow-right {
-            position: relative;
-            left: 0;
-            margin-right: 10px;
         }
     }
 
@@ -31,14 +30,15 @@
 
 .vigilance_main {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 30px 0;
     border-radius: 5px;
     border: 1px solid $lightgrey;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
     font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 
     &:hover>.vigilance_btn .fa {
         animation: arrow 1s ease-in-out infinite;
@@ -48,11 +48,12 @@
         background-color: $yellow;
         display: flex;
         font-size: 13px;
-        padding: 5px;
+        padding: 8px;
         margin: 0;
         width: 80%;
 
         .fa {
+            font-size: 15px;
             margin-left: auto;
             padding: 0 10px;
         }
@@ -79,7 +80,194 @@
     }
 }
 
-.main_title {
-    color: $blueLight;
-    font-size: 21px;
+.block_main {
+
+    .main_title {
+        color: $blueLight;
+        font-size: 21px;
+    }
+
+    .menu_carte {
+        display: flex;
+
+        p {
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: $blueLight;
+            margin-right: 2%;
+            padding: 5px 10px;
+
+            &.is-active {
+                border-radius: 5px;
+                color: white;
+                background-color: $pink;
+
+                &:hover {
+                    color: white;
+                    cursor: default;
+                }
+            }
+
+            &:hover {
+                color: $pink;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .map {
+        position: relative;
+        width: 100%;
+        height: 550px;
+        border-radius: 5px;
+        padding: 5px;
+        background-size: cover;
+        background-position: right;
+        background-image: url("../assets/img/carte/map_prev.png");
+        margin-bottom: 20px;
+
+        .submenu_carte {
+            display: block;
+            width: fit-content;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 13px;
+            color: $blue;
+            background-color: white;
+
+            .carte_day {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                .day {
+                    font-weight: 700;
+                }
+            }
+
+            .is-active {
+                font-weight: 700;
+                color: $pink;
+            }
+
+            * {
+                cursor: pointer;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .legende_carte {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex: 1;
+        margin: 5px;
+        border-radius: 5px;
+        overflow: hidden;
+        // width: fit-content;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        background-color: $blueLight;
+
+        .legende_carte_ico {
+            width: 20px;
+            margin: 0 10px;
+        }
+
+        div {
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .legende-active {
+            color: $blueLight;
+            background-color: white;
+        }
+    }
+}
+
+.article {
+    margin-bottom: 20px;
+
+    h2 {
+        color: $blueLight;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+
+        .fa {
+            color: $pink;
+            font-size: 22px;
+        }
+    }
+
+    .article_img {
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+        width: fit-content;
+        height: fit-content;
+
+        img {
+            width: 101%;
+            height: 101%;
+        }
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 100%;
+            height: 98%;
+            background-color: rgba(0,0,0,.3);
+        }
+
+        &::after {
+            position: absolute;
+            top: 42%;
+            left: 45%;
+            content: "\f04b";
+            font-family: FontAwesome;
+            font-size: 35px;
+            color: white;
+        }
+    }
+
+    .article_txt {
+        p {
+            line-height: 1.5;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .article_read {
+            text-align: end;
+            font-family: "Roboto", sans-serif;
+            font-size: 11px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $pink;
+            cursor: pointer;
+
+            .fa {
+                margin-left: 5px;
+            }
+
+            &:hover {
+                color: $blueSuperLight;
+            }
+        }
+    }
 }

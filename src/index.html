@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <main id="page_wrapper">
+    <div id="page_wrapper">
         <header id="header">
             <section id="header_top">
                 <div class="container">
@@ -227,18 +227,99 @@
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
                             </p>
                         </div>
-                        <div class="col_main">
+                        <div class="col_main block_main">
                             <h1 class="main_title">METEO FRANCE</h1>
+                            <div class="menu_carte">
+                                <p class="is-active">aujourdh'ui</p>
+                                <p>demain</p>
+                                <p>week-end</p>
+                                <p>7 jours</p>
+                                <p>15 jours</p>
+                                <p>tendances</p>
+                            </div>
+                            <div class="map">
+                                <div class="submenu_carte">
+                                    <ul class="carte_day">
+                                        <p class="day">Dimanche 07</p>
+                                        <li class="carte_day_time is-active">Matin</li>
+                                        <li class="carte_day_time">Après-midi</li>
+                                        <li class="carte_day_time">Soirée</li>
+                                        <li class="carte_day_time">Nuit</li>
+                                    </ul>
+                                    <ul class="carte_day">
+                                        <p class="day">Lundi 08</p>
+                                    </ul>
+                                </div>
+                                <div class="legende_carte">
+                                    <div id="legende_carte_prev" class="legende-active">
+                                        <img class="legende_carte_ico" src="./assets/img/carte/legend/mask_sun_on.png"
+                                            alt="prévisions">
+                                        <p>Prévisions</p>
+                                    </div>
+                                    <div id="legende_carte_vent">
+                                        <img class="legende_carte_ico" src="./assets/img/carte/legend/mask_wind_off.png"
+                                            alt="prévisions">
+                                        <p>Vent</p>
+                                    </div>
+                                    <div id="legende_carte_uv">
+                                        <img class="legende_carte_ico" src="./assets/img/carte/legend/mask_uv_off.png"
+                                            alt="prévisions">
+                                        <p>UV</p>
+                                    </div>
+                                </div>
+                                <!-- <div class="map_icons">
+                                    <img class="ico" id="ico_1" src="./assets/img/carte/p1j.svg" alt="sunny">
+                                    <img class="ico" id="ico_2" src="./assets/img/carte/p2j.svg" alt="cloudy">
+                                    <img class="ico" id="ico_3" src="./assets/img/carte/p1j.svg" alt="sunny">
+                                    <img class="ico" id="ico_4" src="./assets/img/carte/p1j.svg" alt="sunny">
+                                    <img class="ico" id="ico_5" src="./assets/img/carte/p1j.svg" alt="sunny">
+                                    <img class="ico" id="ico_6" src="./assets/img/carte/p1j.svg" alt="sunny">
+                                </div>
+                                <div class="map_temps">
+                                    <p class="temp" id="temp_1">17°</p>
+                                    <p class="temp" id="temp_2">17°</p>
+                                    <p class="temp" id="temp_3">17°</p>
+                                    <p class="temp" id="temp_4">17°</p>
+                                    <p class="temp" id="temp_5">17°</p>
+                                    <p class="temp" id="temp_6">17°</p>
+                                </div> -->
+                            </div>
+                            <select class="select" id="select_region">
+                                <option value="">Choisir un lieu</option>
+                            </select>
+                            <div class="article">
+                                <h2>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <span>Bulletin video meteo-france</span>
+                                </h2>
+                                <div class="row_main">
+                                    <div class="article_img">
+                                        <img src="./assets/img/articles/x240" alt="bulletin vidéo">
+                                    </div>
+                                    <div class="article_txt">
+                                        <p>
+                                            Aujourd'hui : dimanche 7 <br>
+                                            2 départements toujours en vigilance orange canicule : Gard (30) et Vaucluse
+                                            (84). Une journée encore chaude dans le sud, quelques orages sur le relief.
+                                            Le soleil est présent sur la majeure partie du pays dès les premières
+                                        </p>
+                                        <div class="article_read">Lire le bulletin
+                                            <span>
+                                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                            </span></div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        bbb
+                    <div class="col_main">
                     </div>
                 </div>
             </section>
         </main>
         <footer id="footer">footer</footer>
-    </main>
+    </div>
 </body>
 
 </html>

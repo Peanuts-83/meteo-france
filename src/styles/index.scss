@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+// @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "./variables";
 @import "./header";
 @import "./main";
@@ -18,26 +20,21 @@ body,
 
 body {
     background-color: #eee;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
 }
 
-main {
-    padding-top: 180px;
-}
-
 // SECTIONS
-
 #header {
-    display: block;
-    background-color: white;
-    position: fixed;
-    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -110px;
     left: 0;
-    top: 0;
+    width: 100%;
     z-index: 1000;
     transition: all .3s ease-in-out;
     transform: translateY(0px);
+    background-color: white;
 }
 
 #sidebar_page {
@@ -116,7 +113,7 @@ a {
 
 .row_main {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 40px;
 }
 
@@ -179,3 +176,11 @@ a {
     }
 }
 
+.select {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 50%;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+}

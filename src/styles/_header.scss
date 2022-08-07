@@ -17,7 +17,6 @@
             margin: 0;
             margin-right: 10px;
         }
-
     }
 
     #header_top_middle {
@@ -115,7 +114,7 @@
             color: $blue;
             max-width: 60px;
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 700;
             font-family: "Quicksand", sans-serif;
             margin: 5px 0;
         }
@@ -128,7 +127,6 @@
 
 #header_middle {
     z-index: 557;
-    position: relative;
     width: 100%;
 
     .block {
@@ -157,7 +155,7 @@
             }
 
             p {
-                font-weight: 600;
+                font-weight: 700;
                 text-transform: uppercase;
                 font-family: "Quicksand", sans-serif;
                 font-size: 12px;
@@ -169,7 +167,6 @@
 }
 
 #header_bottom {
-    position: relative;
     width: 100%;
     background-color: $blueLight;
     font-size: 12px;
@@ -274,7 +271,7 @@
         padding-left: 0;
         padding-bottom: 20px;
         // color: $blue;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 16px;
         border-bottom: 2px solid $blueLight;
         transition: all .3s ease-in-out;
