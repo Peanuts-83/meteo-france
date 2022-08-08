@@ -4,6 +4,7 @@
 @import "./variables";
 @import "./header";
 @import "./main";
+@import "./footer";
 
 
 html,
@@ -81,10 +82,28 @@ body {
         padding: 0 20px;
         border-radius: 5px;
     }
+
+    .block_cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px 30px;
+        margin: 0 -20px;
+        padding: 20px;
+        padding-bottom: 40px;
+        background-color: $greySuperLight;
+    }
+
+    .block_minicards {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
 }
 
 #footer {
     margin-top: 20px;
+    background-color: $blue;
 }
 
 // UTILS
@@ -128,12 +147,12 @@ a {
     display: flex;
     flex-direction: column;
     align-items: start;
-    align-items: stretch;
+    // align-items: stretch;
 
 }
 
 .spacer {
-    margin: 10px;
+    margin: 20px;
 }
 
 .container {
