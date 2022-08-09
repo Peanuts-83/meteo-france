@@ -400,7 +400,7 @@
 
 .card {
     display: grid;
-    grid-template-rows: 150px 100px;
+    grid-template-rows: 150px 1fr;
     position: relative;
     // margin: 10px 0;
     border-radius: 5px;
@@ -416,6 +416,10 @@
 
     &:hover>.img_container img {
         transform: scale(110%);
+    }
+
+    &:hover>.card_txt .suite {
+        color: $pink;
     }
 
     .img_container {
@@ -455,6 +459,7 @@
 
         strong {
             color: $blue;
+            padding-right: 65px;
         }
 
         .pastille_arrow {
@@ -482,9 +487,15 @@
         .suite {
             display: flex;
             justify-content: flex-end;
-            align-items: flex-end;
+            align-items: center;
+            margin: -10px 0;
+            font-size: 11px;
             color: $blueSuperLight;
+            transition: all .3s ease-in-out;
 
+            * {
+                margin-left: 5px;
+            }
         }
     }
 }
@@ -592,13 +603,20 @@
     padding: 0 30px;
     margin: 10px;
     border-radius: 20px;
-    border: 0;
+    border: 2px solid $blueLight;
     text-transform: uppercase;
     font-size: 14px;
     color: white;
     background-color: $blueLight;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
 
-     *{
+    &:hover {
+        background-color: transparent;
+        color: $blueLight;
+    }
+
+    * {
         margin: 10px;
-     }
+    }
 }
