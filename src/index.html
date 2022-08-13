@@ -181,7 +181,7 @@
                                     </a>
                                 </li>
                                 <li class="menu_icon is-active" id="burger_menu">
-                                    <a href="/" title="Nos services" class="fa fa-bars"></a>
+                                    <a href="#" title="Nos services" class="fa fa-bars"></a>
                                 </li>
                             </ul>
                         </nav>
@@ -199,8 +199,98 @@
                 </div>
             </section>
         </header>
-        <aside id="sidebar_page">sidebar</aside>
-        <button id="sidebar_overlay">btn sidebar overlay</button>
+        <aside class="sidebar_page">
+            <div class="logos">
+                <img src="./assets/img/marianne.svg" alt="marianne">
+                <img src="./assets/img/logo_small_0.png" alt="Météo France">
+            </div>
+            <div class="menu_burger">
+                <div class="vigilance_burger">
+                    <i class="fa fa-warning" aria-hidden="true"></i>
+                    <p>Vigilance</p>
+                </div>
+                <ul>
+                    <li>
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <p>Acceuil</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-newspaper" aria-hidden="true"></i>
+                        <p>Site institutionnel</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-globe-asia" aria-hidden="true"></i>
+                        <p>Meteo outre mer</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-globe-americas" aria-hidden="true"></i>
+                        <p>Climat</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-newspaper" aria-hidden="true"></i>
+                        <p>Actus & dossiers</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-mountain" aria-hidden="true"></i>
+                        <p>Meteo montagne</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-water aria-hidden=" true"></i>
+                        <p>Meteo marine</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-umbrella-beach" aria-hidden="true"></i>
+                        <p>Meteo des plages</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-globe-africa" aria-hidden="true"></i>
+                        <p>Animations</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        <p>A propos de meteo-france</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <p>Open data</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <p>Nos services</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-newspaper" aria-hidden="true"></i>
+                        <p>Applications mobiles</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-newspaper" aria-hidden="true"></i>
+                        <p>Widgets</p>
+                    </li>
+                </ul>
+                <hr />
+                <div class="follow_us">
+                    <p>SUIVEZ-NOUS</p>
+                    <div class="social_icons">
+                        <div class="social_round">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="social_round">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                        <div class="social_round">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        </div>
+                        <div class="social_round">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                        <div class="social_round">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="sidebar_overlay"></div>
         <main id="main" class="container">
             <section>
                 <div class="row alert">
@@ -272,6 +362,24 @@
                             </div>
                             <select class="select" id="select_region">
                                 <option value="">Choisir un lieu</option>
+                                <option value="/previsions-meteo-france/occitanie/regin11">Occitanie</option>
+                                <option value="/previsions-meteo-france/hauts-de-france/1">Hauts-de-france</option>
+                                <option value="/previsions-meteo-france/normandie/2">Normandie</option>
+                                <option value="/previsions-meteo-france/ile-de-france/3">Île-de-france</option>
+                                <option value="/previsions-meteo-france/grand-est/4">Grand est</option>
+                                <option value="/previsions-meteo-france/bretagne/5">Bretagne</option>
+                                <option value="/previsions-meteo-france/pays-de-la-loire/6">Pays de la loire</option>
+                                <option value="/previsions-meteo-france/centre-val-de-loire/7">Centre-val de loire
+                                </option>
+                                <option value="/previsions-meteo-france/bourgogne-franche-comte/8">
+                                    Bourgogne-franche-comté</option>
+                                <option value="/previsions-meteo-france/nouvelle-aquitaine/9">Nouvelle aquitaine
+                                </option>
+                                <option value="/previsions-meteo-france/auvergne-rhone-alpes/10">Auvergne-rhône-alpes
+                                </option>
+                                <option value="/previsions-meteo-france/provence-alpes-cote-d-azur/12">
+                                    Provence-alpes-côte d&#039;azur</option>
+                                <option value="/previsions-meteo-france/corse/13">Corse</option>
                             </select>
                             <!-- Article -->
                             <div class="article">
@@ -303,17 +411,63 @@
                     <div class="col_main">
                         <div class="spacer"></div>
                         <!-- Card Multi -->
-                        <div class="card card_multi">
-                            <div class="img_container">
-                                <img src="./assets/img/articles/8280014820221821.jpg" alt="à la une">
-                                <div class="pastille">a la une</div>
-                            </div>
-                            <div class="card_txt">
-                                <div class="pastille_arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
-                                <strong>Une sécheresse des sols historique dans de nombreuses régions</strong>
-                                <p>Après un déficit de pluie historique à l'échelle mondiale, lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit.</p>
-                            </div>
+                        <div class="card_multi">
+                            <ul class="card_multi_ul">
+                                <li class="card_multi_li" id="li_1">
+                                    <div class="img_container">
+                                        <img src="./assets/img/articles/44702011820221620_0.jpg" alt="à la une">
+                                        <div class="pastille">a la une</div>
+                                    </div>
+                                    <div class="card_txt">
+                                        <div class="pastille_arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </div>
+                                        <strong>Fin de l’épisode caniculaire dimanche, début d’un épisode
+                                            pluvio-orageux</strong>
+                                        <p>L'épisode caniculaire va prendre fin dimanche à la suite d'une dégradation
+                                            orageuse qui touchera la plupart des régions.</p>
+                                    </div>
+                                </li>
+                                <li class="card_multi_li" id="li_2">
+                                    <div class="img_container">
+                                        <img src="./assets/img/articles/8280014820221821.jpg" alt="à la une">
+                                        <div class="pastille">a la une</div>
+                                    </div>
+                                    <div class="card_txt">
+                                        <div class="pastille_arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </div>
+                                        <strong>Une sécheresse des sols historique dans de nombreuses régions</strong>
+                                        <p>Après un déficit de pluie historique à l'échelle mondiale, lorem ipsum dolor
+                                            sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </li>
+                                <li class="card_multi_li" id="li_3">
+                                    <div class="img_container">
+                                        <img src="./assets/img/articles/canciule christophe_0.JPG" alt="à la une">
+                                        <div class="pastille">a la une</div>
+                                    </div>
+                                    <div class="card_txt">
+                                        <div class="pastille_arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </div>
+                                        <strong>Canicule : comment se protéger ?</strong>
+                                        <p>En cas de fortes chaleurs, l'organisme est soumis à rude épreuve. Il faut
+                                            bien connaitre les risques pour la santé...</p>
+                                    </div>
+                                </li>
+                                <li class="card_multi_li" id="li_4">
+                                    <div class="img_container">
+                                        <img src="./assets/img/articles/Canicule-GettyImages-Pict Rider.jpg"
+                                            alt="à la une">
+                                        <div class="pastille">a la une</div>
+                                    </div>
+                                    <div class="card_txt">
+                                        <div class="pastille_arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </div>
+                                        <strong>Canicule océanique : la mer Méditerranée anormalement chaude</strong>
+                                        <p>Fin juillet, la température de surface de la mer a régulièrement atteint 27 à
+                                            30 °C entre la mer</p>
+                                    </div>
+                                </li>
+                            </ul>
                             <nav class="dots">
                                 <div class="dot dot-active"></div>
                                 <div class="dot"></div>
@@ -491,16 +645,22 @@
                             <div class="article_menu">
                                 <nav class="article_menu_options">
                                     <div class="nav_article_video nav-active" id="nav1">
-                                        <i class="fa fa-heart" aria-hidden="true"><p>Recommandées</p></i>
+                                        <i class="fa fa-heart" aria-hidden="true">
+                                            <p>Recommandées</p>
+                                        </i>
 
                                         <div class="underliner"></div>
                                     </div>
                                     <div class="nav_article_video" id="nav1">
-                                        <i class="fa fa-clock-o" aria-hidden="true"><p>Récents</p></i>
+                                        <i class="fa fa-clock-o" aria-hidden="true">
+                                            <p>Récents</p>
+                                        </i>
                                         <div class="underliner"></div>
                                     </div>
                                     <div class="nav_article_video" id="nav1">
-                                        <i class="fa fa-users" aria-hidden="true"><p>Populaires</p></i>
+                                        <i class="fa fa-users" aria-hidden="true">
+                                            <p>Populaires</p>
+                                        </i>
                                         <div class="underliner"></div>
                                     </div>
                                 </nav>

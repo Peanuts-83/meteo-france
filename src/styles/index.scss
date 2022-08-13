@@ -3,6 +3,7 @@
 // @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "./variables";
 @import "./header";
+@import "./sidebar";
 @import "./main";
 @import "./footer";
 
@@ -38,21 +39,21 @@ body {
     background-color: white;
 }
 
-#sidebar_page {
+.sidebar_page {
     display: block;
     position: fixed;
     width: 320px;
     top: 0;
     bottom: 0;
-    right: -320px;
+    right: -340px;
+    opacity: 0;
     z-index: 1001;
     background-color: white;
-    opacity: 0;
     transition: all .5s ease-in-out;
 }
 
-#sidebar_overlay {
-    display: flex;
+.sidebar_overlay {
+    display: none;
     justify-content: center;
     align-items: center;
     padding-right: 320px;
@@ -69,7 +70,6 @@ body {
     left: 0;
     transition: all .3s ease-in-out;
     opacity: 0;
-    pointer-events: none;
     cursor: pointer;
 }
 
@@ -122,6 +122,11 @@ a {
     * {
         color: $pink;
     }
+}
+
+.sidebar-active {
+    right: 0;
+    opacity: 1;
 }
 
 .row {
