@@ -17,13 +17,13 @@ legende_carte.forEach(el => {
         // Change maps
         switch (el.id) {
             case "legende_carte_prev":
-                carte.style.backgroundImage = 'url("../assets/img/carte/map_prev.png")'
+                carte.style.backgroundImage = 'url("./assets/img/carte/map_prev.png")'
                 break
             case "legende_carte_vent":
-                carte.style.backgroundImage = 'url("../assets/img/carte/map_vent.png")'
+                carte.style.backgroundImage = 'url("./assets/img/carte/map_vent.png")'
                 break
             case "legende_carte_uv":
-                carte.style.backgroundImage = 'url("../assets/img/carte/map_uv.png")'
+                carte.style.backgroundImage = 'url("./assets/img/carte/map_uv.png")'
                 break
         }
     })
