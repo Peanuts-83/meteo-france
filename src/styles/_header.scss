@@ -1,13 +1,10 @@
-// * {
-//     border: 1px dashed red;
-// }
-
 #header_top {
     padding: 12px 0;
 
     #header_top_left {
         display: flex;
         justify-content: start;
+        align-items: center;
         padding: 0;
 
         .marianne,
@@ -16,6 +13,10 @@
             width: auto;
             margin: 0;
             margin-right: 10px;
+        }
+
+        .marianne img {
+            height: 60px;
         }
     }
 
@@ -298,8 +299,18 @@
 
 @media screen and (max-width:656px) {}
 
-@media screen and (min-width:1294px) and (min-height: 630px) {}
+@media screen and (max-width:1024px) {
+    #header_top {
+        #socialmedia {
+            display: none;
+        }
+        .block_search_form {
+            width: auto;
+        }
+    }
+    #header_middle {
+        display: none;
+    }
+}
 
-@media screen and (min-width:1720px) and (min-height: 980px) {}
-
-@media screen and (min-width:1600px) {}
+@media screen and (max-width:1200px) {}

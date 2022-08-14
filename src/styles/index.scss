@@ -20,10 +20,13 @@ body,
     font-size: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #eee;
     font-family: 'Quicksand', sans-serif;
-    box-sizing: border-box;
 }
 
 // SECTIONS
@@ -146,6 +149,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+    width: 100%;
 }
 
 .col_main {
@@ -212,4 +216,35 @@ a {
     border: 1px solid grey;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+@media screen and (max-width:325px) {}
+
+@media screen and (max-width:656px) {}
+
+@media screen and (max-width:1024px) and (min-width:656px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .row_main {
+        grid-template-columns: 1fr;
+    }
+
+    #main {
+        .block_cards {
+            // display: grid;
+            // gap: 10px 30px;
+            grid-template-columns: 1fr 1fr;
+            // background-color: $pink;
+        }
+
+    }
+}
+
+@media screen and (max-width:1200px) and (min-width:1024px) {
+    .container {
+        max-width: 940px;
+    }
 }
