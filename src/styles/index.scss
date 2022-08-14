@@ -171,43 +171,6 @@ a {
     position: relative;
 }
 
-.block_search_form {
-    display: flex;
-    border: solid 1px #dee2e6;
-    border-radius: 5px;
-    width: 460px;
-    max-width: 100%;
-    margin-right: 20px;
-    margin-left: 0;
-
-    .search_form_input {
-        flex-grow: 2;
-        height: 45px;
-        padding-left: 15px;
-        font-size: 12px;
-        font-weight: 500;
-        color: $blue;
-        border: none;
-
-        &:focus {
-            outline: none;
-        }
-    }
-
-    .search_form_submit {
-        background: transparent;
-        border: none;
-        padding: 10px;
-        font-size: 16px;
-        color: grey;
-
-        &:hover {
-            color: $blue;
-            cursor: pointer;
-        }
-    }
-}
-
 .select {
     padding: 10px;
     margin-bottom: 20px;
@@ -218,12 +181,13 @@ a {
     cursor: pointer;
 }
 
+@media screen and (max-width:1200px) {
+    .container {
+        max-width: 940px;
+    }
+}
 
-@media screen and (max-width:325px) {}
-
-@media screen and (max-width:656px) {}
-
-@media screen and (max-width:1024px) and (min-width:656px) {
+@media screen and (max-width:1024px) {
     .container {
         max-width: 600px;
     }
@@ -243,8 +207,27 @@ a {
     }
 }
 
-@media screen and (max-width:1200px) and (min-width:1024px) {
+@media screen and (max-width:656px) {
     .container {
-        max-width: 940px;
+        max-width: 100%;
+    }
+
+    #header {
+        top: 0;
+    }
+
+    #main {
+        section {
+            background-color: transparent;
+            padding: 0 10px;
+        }
+
+        .block_cards {
+            grid-template-columns: 1fr;
+
+            &>div {
+                grid-column: 1/2;
+            }
+        }
     }
 }

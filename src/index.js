@@ -47,11 +47,13 @@ dots.forEach((dot, i) => {
 
 // Menu burger
 const burger_menu = document.querySelector('#burger_menu')
+const burger_menu_top = document.querySelector('#burger_menu_top')
+const burger = [burger_menu, burger_menu_top]
 const sidebar = document.querySelector('.sidebar_page')
 const overlay = document.querySelector('.sidebar_overlay')
 let burgerActive = false
 
-burger_menu.addEventListener('mouseup', () => {
+burger.forEach(el => el.addEventListener('mouseup', () => {
     burgerActive = !burgerActive
 
     if (burgerActive) {
@@ -60,7 +62,7 @@ burger_menu.addEventListener('mouseup', () => {
         overlay.style.display = 'flex'
         overlay.style.opacity = 1
     }
-})
+}))
 
 overlay.addEventListener('mouseup', () => {
     burgerActive = !burgerActive

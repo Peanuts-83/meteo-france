@@ -25,20 +25,24 @@
 
     .cities,
     .outre-mer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-        justify-items: center;
+        display: flex;
+        justify-content: center;
         width: 1140px;
 
         ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            // justify-items: center;
             margin: 0;
-            padding: 0;
-            line-height: 1.5;
+            padding: 10px 10%;
+            text-align: center;
             list-style-type: none;
 
             li {
+                text-align: start;
                 cursor: pointer;
+                margin: -10px 0;
             }
         }
     }
@@ -128,20 +132,51 @@
     }
 }
 
-@media screen and (max-width:1024px) and (min-width:656px) {
+@media screen and (max-width:1024px) {
     .top20 {
 
         .cities,
         .outre-mer {
             width: 600px;
+
+            ul {
+                grid-template-columns: 1fr 1fr;
+                padding: 10px 0;
+
+            }
         }
 
         .mini_menus {
             ul {
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
                 width: 600px;
             }
         }
     }
+}
+
+@media screen and (max-width:656px) {
+    .top20 {
+
+        .cities,
+        .outre-mer {
+            width: 100%;
+            text-align: center;
+
+            ul {
+                grid-template-columns: 1fr;
+                padding: 10px 0;
+
+            }
+        }
+
+        .mini_menus {
+            ul {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+        }
+    }
+
 }
