@@ -10,6 +10,7 @@ $greyLight: rgb(224, 224, 224);
 $greySuperLight: rgb(245, 245, 245);
 
 // animations
+
 // arrow right moving
 @keyframes arrow {
     0% {
@@ -22,5 +23,15 @@ $greySuperLight: rgb(245, 245, 245);
 
     100% {
         left: 0;
+    }
+}
+
+// Menu fadein/fadeout
+@keyframes menu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

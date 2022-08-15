@@ -45,6 +45,61 @@ dots.forEach((dot, i) => {
     })
 })
 
+// Menu Climat & Actus
+const btn_climat = document.querySelector('#btn_climat')
+const btn_actus = document.querySelector('#btn_actus')
+const btns = document.querySelectorAll('.menu_icon')
+const menu_climat = document.querySelector('#menu_climat')
+const menu_actus = document.querySelector('#menu_actus')
+const menus = [menu_climat, menu_actus]
+let menuHeight = 0
+let target = null
+
+btns.forEach(el => el.addEventListener('mouseover', (e) => {
+    if (el === btn_climat) {
+        console.log('btn_climat')
+        target = menu_climat
+        target.style.display = 'flex'
+    } else if (el === btn_actus) {
+        target = menu_actus
+        target.style.display = 'flex'
+    } else {
+        target = null
+    }
+    menuHeight = target ? target.offsetHeight : 0
+    console.log('HEIGHT', menuHeight)
+    showMenu(target)
+}))
+
+function observerClientY(e) {
+        console.log('target:', e.target)
+        if (e.clientY > menuHeight + 165 || e.clientY < 120) {
+            target = null
+            showMenu(target)
+            menuHeight = 0
+        }
+
+}
+
+function showMenu(target) {
+    if (target === null) {
+        console.log('CLOSE')
+        menus.forEach(el => {
+            el.style.opacity = 0
+            setTimeout(() => el.style.display = 'none', 500)
+            window.removeEventListener('mousemove', observerClientY, true)
+        })
+
+    } else {
+        console.log('OPEN')
+        const close = menus.filter(x => x !== target)[0]
+        close.style.display = 'none'
+        target.style.opacity = 1
+        window.addEventListener('mousemove', observerClientY,true)
+    }
+}
+
+
 // Menu burger
 const burger_menu = document.querySelector('#burger_menu')
 const burger_menu_top = document.querySelector('#burger_menu_top')
