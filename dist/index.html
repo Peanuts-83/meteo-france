@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/58b26ec2f8.js" crossorigin="anonymous"></script>
+    <title>PREVISIONS METEO FRANCE - Site Officiel de Météo-France - Prévisions gratuites à 15 jours sur la France et
+        sur le monde</title>
+    <script defer src="main.bundle.js"></script>
+<script defer src="main.bundle.js"></script></head>
+
+<body>
+    <div id="page_wrapper">
+        <header id="header">
+            <section id="header_top">
+                <div class="container">
+                    <div class="row">
+                        <div id="header_top_left">
+                            <figure class="marianne">
+                                <a href="#">
+                                    <img src="./assets/img/marianne.svg" alt="Marianne" height="80px">
+                                </a>
+                            </figure>
+                            <figure class="logo">
+                                <a href="#">
+                                    <img src="./assets//img/logo_small_0.png" alt="Logo" height="80px">
+                                </a>
+                            </figure>
+                        </div>
+                        <div id="header_top_middle" class="row">
+                            <div id="block_search" class="block">
+                                <form class="block_search_form">
+                                    <input type="text" placeholder="Rechercher une ville, un pays..."
+                                        class="search_form_input">
+                                    <button class="search_form_submit" type="submit" title="Lancer la recherche"
+                                        aria-label="Lancer la recherche"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                            <nav id="socialmedia">
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-linkedin"></i>
+                            </nav>
+                        </div>
+                        <div id="header_top_right">
+                            <i class="fas fa-bell"></i>
+                            <img src="./assets/img/carte_vigilance.png" alt="Carte vigilance"
+                                title="Vigilance Météo-France" id="carte_vigilance">
+                            <div class="block_vigilance" role="alert">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <p class="label">Vigilance météo</p>
+                                <div id="tooltip_vigilance">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Soyez très vigilant</p>
+                                </div>
+                            </div>
+                            <li class="menu_icon is-active" id="burger_menu_top">
+                                <a href="#" title="Ouvrir le menu" class="fa fa-bars"></a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="header_search_xs">
+                <div id="block_search" class="block">
+                    <form class="block_search_form">
+                        <input type="text" placeholder="Rechercher une ville, un pays..."
+                            class="search_form_input">
+                        <button class="search_form_submit" type="submit" title="Lancer la recherche"
+                            aria-label="Lancer la recherche"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </section>
+            <section id="header_middle">
+                <div class="container">
+                    <div class="row">
+                        <nav id="block_menu_principal" class="block block_menu navigation">
+                            <ul>
+                                <li class="menu_icon is-active">
+                                    <a href="#" title="Prévision Météo-France"">
+                                        <i class=" fa fa-cloud-sun"></i>
+                                        <p>Previsions</p>
+                                    </a>
+                                </li>
+                                <li class="menu_icon">
+                                    <a href="#" title="Météo des plages">
+                                        <i class="fa fa-umbrella-beach"></i>
+                                        <p>Meteo des plages</p>
+                                    </a>
+                                </li>
+                                <li class="menu_icon">
+                                    <a href="#" title="Météo marine">
+                                        <i class="fa fa-water"></i>
+                                        <p>Meteo marine</p>
+                                    </a>
+                                </li>
+                                <li class="menu_icon">
+                                    <a href="#" title="Météo montagne">
+                                        <i class="fa fa-mountain"></i>
+                                        <p>Meteo montagne</p>
+                                    </a>
+                                </li>
+                                <li class="menu_icon" id="btn_climat">
+                                    <a href="#" title="Climat et changement climatique">
+                                        <i class="fa fa-globe-europe"></i>
+                                        <p>Climat</p>
+                                        <span class="fa fa-angle-down"></span>
+                                    </a>
+                                    <div class="menu_container" id="menu_climat">
+                                        <ul class="menu-grid menu_row">
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Tendances à trois mois</a></li>
+                                                    <li class="text_menu"><a href="#">Tendances à trois mois</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Comprendre le climat</a></li>
+                                                    <li class="text_menu"><a href="#">Le climat mondial</a></li>
+                                                    <li class="text_menu"><a href="#">Le climat en France</a></li>
+                                                    <li class="text_menu"><a href="#">Etudier le climat passé</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Le changement climatique</a></li>
+                                                    <li class="text_menu"><a href="#">Observer le changement
+                                                            climatique</a></li>
+                                                    <li class="text_menu"><a href="#">Quel climat futur?</a></li>
+                                                    <li class="text_menu"><a href="#">Climat HD</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Normales et relevés</a></li>
+                                                    <li class="text_menu"><a href="#">Normales et records</a></li>
+                                                    <li class="text_menu"><a href="#">Relevés météorologiques</a></li>
+                                                    <li class="text_menu"><a href="#">Buletins climatologiques</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu_icon" id="btn_actus">
+                                    <a href="#" title="Actualités météo & dossiers">
+                                        <i class="fa fa-newspaper"></i>
+                                        <p>Actus & dossiers</p>
+                                        <span class="fa fa-angle-down"></span>
+                                    </a>
+                                    <div class="menu_container" id="menu_actus">
+                                        <ul class="menu-grid menu_row">
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Actualités</a></li>
+                                                    <li class="text_menu"><a href="#">A la une</a></li>
+                                                    <li class="text_menu"><a href="#">Infos prévisions</a></li>
+                                                    <li class="text_menu"><a href="#">Infos climat</a></li>
+                                                    <li class="text_menu"><a href="#">Planète</a></li>
+                                                    <li class="text_menu"><a href="#">Entretiens</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Comprendre la météo</a></li>
+                                                    <li class="text_menu"><a href="#">Les saisons</a></li>
+                                                    <li class="text_menu"><a href="#">Le vent</a></li>
+                                                    <li class="text_menu"><a href="#">La température</a></li>
+                                                    <li class="text_menu"><a href="#">L'atmosphère</a></li>
+                                                    <li class="text_menu"><a href="#">Les précipitations</a></li>
+                                                    <li class="text_menu"><a href="#">Les orages</a></li>
+                                                    <li class="text_menu"><a href="#">Les nuages</a></li>
+                                                    <li class="text_menu"><a href="#">Arc-en-ciel et mirages</a></li>
+                                                    <li class="text_menu"><a href="#">Les océans</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col">
+                                                <ul class="menu-flex menu_col">
+                                                    <li class="title_menu"><a href="#">Magazine</a></li>
+                                                    <li class="text_menu"><a href="#">Météo et histoire</a></li>
+                                                    <li class="text_menu"><a href="#">La météo en questions</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="submenu menu_col"></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu_icon">
+                                    <a href="#" title="Offres et services de Météo France">
+                                        <i class="fa fa-user-plus"></i>
+                                        <p>Nos services</p>
+                                    </a>
+                                </li>
+                                <li class="menu_icon is-active" id="burger_menu">
+                                    <a href="#" title="Ouvrir le menu" class="fa fa-bars"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section id="header_bottom">
+                <div class="container">
+                    <div class="block_bottom_nav">
+                        <span title="ajouter une ville" id="add_city">
+                            <p>Ajouter une ville</p>
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <aside class="sidebar_page">
+            <div class="logos">
+                <img src="./assets/img/marianne.svg" alt="marianne">
+                <img src="./assets/img/logo_small_0.png" alt="Météo France">
+            </div>
+            <div class="menu_burger">
+                <div class="vigilance_burger">
+                    <i class="fa fa-warning" aria-hidden="true"></i>
+                    <p>Vigilance</p>
+                </div>
+                <ul>
+                    <li>
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <p>Acceuil</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-newspaper" aria-hidden="true"></i>
+                        <p>Site institutionnel</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-globe-asia" aria-hidden="true"></i>
+                        <p>Meteo outre mer</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-globe-americas" aria-hidden="true"></i>
+                        <p>Climat</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-newspaper" aria-hidden="true"></i>
+                        <p>Actus & dossiers</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-mountain" aria-hidden="true"></i>
+                        <p>Meteo montagne</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-water aria-hidden=" true"></i>
+                        <p>Meteo marine</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-umbrella-beach" aria-hidden="true"></i>
+                        <p>Meteo des plages</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-globe-africa" aria-hidden="true"></i>
+                        <p>Animations</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        <p>A propos de meteo-france</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <p>Open data</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <p>Nos services</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-newspaper" aria-hidden="true"></i>
+                        <p>Applications mobiles</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-newspaper" aria-hidden="true"></i>
+                        <p>Widgets</p>
+                    </li>
+                </ul>
+                <hr />
+                <div class="follow_us">
+                    <p>SUIVEZ-NOUS</p>
+                    <div class="social_icons">
+                        <div class="social_round">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="social_round">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                        <div class="social_round">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        </div>
+                        <div class="social_round">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                        <div class="social_round">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="sidebar_overlay"></div>
+        <main id="main" class="container">
+            <section>
+                <div class="row alert">
+                    <div class="alert_content">
+                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                        <p>
+                            Danger de feux de végétation dans le sud de la France
+                        </p>
+
+                    </div>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+            </section>
+            <section>
+                <div class="row_main">
+                    <div class="col">
+                        <div class="spacer"></div>
+                        <div class="vigilance_main">
+                            <p class="vigilance_text">
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <span>VIGILANCE ORANGE EN COURS</span>
+                            </p>
+                            <p class="vigilance_btn">
+                                <span>Consulter</span>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                        <!-- Carte -->
+                        <div class="col_main block_main">
+                            <h1 class="main_title">METEO FRANCE</h1>
+                            <div class="menu_carte">
+                                <p class="is-active">aujourdh'ui</p>
+                                <p>demain</p>
+                                <p>week-end</p>
+                                <p>7 jours</p>
+                                <p>15 jours</p>
+                                <p>tendances</p>
+                            </div>
+                            <div class="carte">
+                                <div class="submenu_carte">
+                                    <ul class="carte_day">
+                                        <p class="day">Dimanche 07</p>
+                                        <li class="carte_day_time is-active">Matin</li>
+                                        <li class="carte_day_time">Après-midi</li>
+                                        <li class="carte_day_time">Soirée</li>
+                                        <li class="carte_day_time">Nuit</li>
+                                    </ul>
+                                    <ul class="carte_day">
+                                        <p class="day">Lundi 08</p>
+                                    </ul>
+                                </div>
+                                <div class="legende_carte">
+                                    <div id="legende_carte_prev" class="legende-active">
+                                        <img class="legende_carte_ico" src="./assets/img/carte/legend/mask_sun_on.png"
+                                            alt="prévisions">
+                                        <p>Prévisions</p>
+                                    </div>
+                                    <div id="legende_carte_vent">
+                                        <img class="legende_carte_ico" src="./assets/img/carte/legend/mask_wind_off.png"
+                                            alt="prévisions">
+                                        <p>Vent</p>
+                                    </div>
+                                    <div id="legende_carte_uv">
+                                        <img class="legende_carte_ico" src="./assets/img/carte/legend/mask_uv_off.png"
+                                            alt="prévisions">
+                                        <p>UV</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <select class="select" id="select_region">
+                                <option value="">Choisir un lieu</option>
+                                <option value="/previsions-meteo-france/occitanie/regin11">Occitanie</option>
+                                <option value="/previsions-meteo-france/hauts-de-france/1">Hauts-de-france</option>
+                                <option value="/previsions-meteo-france/normandie/2">Normandie</option>
+                                <option value="/previsions-meteo-france/ile-de-france/3">Île-de-france</option>
+                                <option value="/previsions-meteo-france/grand-est/4">Grand est</option>
+                                <option value="/previsions-meteo-france/bretagne/5">Bretagne</option>
+                                <option value="/previsions-meteo-france/pays-de-la-loire/6">Pays de la loire</option>
+                                <option value="/previsions-meteo-france/centre-val-de-loire/7">Centre-val de loire
+                                </option>
+                                <option value="/previsions-meteo-france/bourgogne-franche-comte/8">
+                                    Bourgogne-franche-comté</option>
+                                <option value="/previsions-meteo-france/nouvelle-aquitaine/9">Nouvelle aquitaine
+                                </option>
+                                <option value="/previsions-meteo-france/auvergne-rhone-alpes/10">Auvergne-rhône-alpes
+                                </option>
+                                <option value="/previsions-meteo-france/provence-alpes-cote-d-azur/12">
+                                    Provence-alpes-côte d&#039;azur</option>
+                                <option value="/previsions-meteo-france/corse/13">Corse</option>
+                            </select>
+                            <!-- Article -->
+                            <div class="article">
+                                <h2>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <span>Bulletin video meteo-france</span>
+                                </h2>
+                                <div class="row_main">
+                                    <div class="article_img">
+                                        <img src="./assets/img/articles/x240" alt="bulletin vidéo">
+                                    </div>
+                                    <div class="article_txt">
+                                        <p>
+                                            Aujourd'hui : dimanche 7 <br>
+                                            2 départements toujours en vigilance orange canicule : Gard (30) et Vaucluse
+                                            (84). Une journée encore chaude dans le sud, quelques orages sur le relief.
+                                            Le soleil est présent sur la majeure partie du pays dès les premières
+                                        </p>
+                                        <div class="article_read">Lire le bulletin
+                                            <span>
+                                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col_main">
+                        <div class="spacer"></div>
+                        <!-- Card Multi -->
+                        <div class="card_multi">
+                            <ul class="card_multi_ul">
+                                <li class="card_multi_li" id="li_1">
+                                    <div class="img_container">
+                                        <img src="./assets/img/articles/44702011820221620_0.jpg" alt="à la une">
+                                        <div class="pastille">a la une</div>
+                                    </div>
+                                    <div class="card_txt">
+                                        <div class="pastille_arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </div>
+                                        <strong>Fin de l’épisode caniculaire dimanche, début d’un épisode
+                                            pluvio-orageux</strong>
+                                        <p>L'épisode caniculaire va prendre fin dimanche à la suite d'une dégradation
+                                            orageuse qui touchera la plupart des régions.</p>
+                                    </div>
+                                </li>
+                                <li class="card_multi_li" id="li_2">
+                                    <div class="img_container">
+                                        <img src="./assets/img/articles/8280014820221821.jpg" alt="à la une">
+                                        <div class="pastille">a la une</div>
+                                    </div>
+                                    <div class="card_txt">
+                                        <div class="pastille_arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </div>
+                                        <strong>Une sécheresse des sols historique dans de nombreuses régions</strong>
+                                        <p>Après un déficit de pluie historique à l'échelle mondiale, lorem ipsum dolor
+                                            sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </li>
+                                <li class="card_multi_li" id="li_3">
+                                    <div class="img_container">
+                                        <img src="./assets/img/articles/canciule christophe_0.JPG" alt="à la une">
+                                        <div class="pastille">a la une</div>
+                                    </div>
+                                    <div class="card_txt">
+                                        <div class="pastille_arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </div>
+                                        <strong>Canicule : comment se protéger ?</strong>
+                                        <p>En cas de fortes chaleurs, l'organisme est soumis à rude épreuve. Il faut
+                                            bien connaitre les risques pour la santé...</p>
+                                    </div>
+                                </li>
+                                <li class="card_multi_li" id="li_4">
+                                    <div class="img_container">
+                                        <img src="./assets/img/articles/Canicule-GettyImages-Pict Rider.jpg"
+                                            alt="à la une">
+                                        <div class="pastille">a la une</div>
+                                    </div>
+                                    <div class="card_txt">
+                                        <div class="pastille_arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </div>
+                                        <strong>Canicule océanique : la mer Méditerranée anormalement chaude</strong>
+                                        <p>Fin juillet, la température de surface de la mer a régulièrement atteint 27 à
+                                            30 °C entre la mer</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <nav class="dots">
+                                <div class="dot dot-active"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="block_cards">
+                    <!-- Cards -->
+                    <div class="card" id="block_card1">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/GettyImages-92505223Canadair-Corse_0.gif" alt="à la une">
+                            <div class="pastille">a la une</div>
+                        </div>
+                        <div class="card_txt">
+                            <strong>Feux de forêt : connaissez-vous les bon gestes ?</strong>
+                            <p>Aujourd'hui, 90% des départs de feux de forêt sont d'origine humaine, et la moitiée est
+                                ...</p>
+                        </div>
+                    </div>
+                    <div class="card" id="block_card2">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/Canicule-Paris-26juill2012-Pascal Taburet.JPG"
+                                alt="Température">
+                            <div class="pastille">Température</div>
+                        </div>
+                        <div class="card_txt">
+                            <strong>Qu'est-ce que la Vigilance canicule ?</strong>
+                            <p>La Vigilance de Météo-France intègre les canicules depuis 2004. La chaleur, y compris...
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Minicards -->
+                    <div class="block_minicards" id="block_card3">
+                        <div class="minicard">
+                            <div class="img_container">
+                                <img src="./assets/img/articles/sebastien_laflorencie_virga_enm.gif"
+                                    alt="minicard vizu">
+                            </div>
+                            <div class="minicard_txt">
+                                <strong>Formation au changement climatique à Toulouse du 10 au 14 octobre 2022</strong>
+                                <p class="minicard_date">08/07/2022</p>
+                            </div>
+                        </div>
+                        <div class="minicard">
+                            <div class="img_container">
+                                <img src="./assets/img/articles/93569212720221616.jpg" alt="minicard vizu">
+                            </div>
+                            <div class="minicard_txt">
+                                <strong>Canicule océanique : la mer Méditerranée anormalement chaude</strong>
+                                <p class="minicard_date">29/07/2022</p>
+                            </div>
+                        </div>
+                        <div class="minicard">
+                            <div class="img_container">
+                                <img src="./assets/img/articles/mer-GettyImages-1305883389.gif" alt="minicard vizu">
+                            </div>
+                            <div class="minicard_txt">
+                                <strong>Température de la mer : pourquoi c'est important?</strong>
+                                <p class="minicard_date">27/07/2022</p>
+                            </div>
+                        </div>
+                        <div class="minicard">
+                            <div class="img_container">
+                                <img src="./assets/img/articles/canciule christophe_0.JPG" alt="minicard vizu">
+                            </div>
+                            <div class="minicard_txt">
+                                <strong>Le changement climatique en France</strong>
+                                <p class="minicard_date">25/02/2020</p>
+                            </div>
+                        </div>
+                        <div class="minicard">
+                            <div class="img_container">
+                                <img src="./assets/img/articles/Drias-GettyImages-1005284576.gif" alt="minicard vizu">
+                            </div>
+                            <div class="minicard_txt">
+                                <strong>Météo-France éclaire le climat en France jusqu'en 2100'</strong>
+                                <p class="minicard_date">01/02/2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="block_card4">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/Chaluer illustrationGettyImages-1148343978.gif"
+                                alt="Questions">
+                            <div class="pastille">Questions</div>
+                        </div>
+                        <div class="card_txt">
+                            <strong>Pourquoi fait-il plus chaud en ville qu'à la campagne la nuit ?</strong>
+                            <p>La nuit, la température en ville peut rester plus élevée que dans les zones rurales...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" id="block_card5">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/GettyImages-1150050227_0.gif" alt="Température">
+                            <div class="pastille">Température</div>
+                        </div>
+                        <div class="card_txt">
+                            <strong>Comment les climatologues évaluent-ils les vagues de chaleur et les canicules
+                                ?</strong>
+                            <p>Météo-France utilise des critères climatologiques pour évaluer et qualifier les...</p>
+                        </div>
+                    </div>
+
+                    <!-- cards_Article -->
+                    <div class="article cards_article" id="block_article">
+                        <h2>
+                            <span>ZCIT sur le Pacifique Est - 06/08/2022 - 09 h 00 UTC </span>
+                        </h2>
+                        <div class="col_main">
+                            <div class="article_img">
+                                <img src="./assets/img/articles/report" alt="bulletin vidéo">
+                            </div>
+                            <div class="article_txt">
+                                <p>
+                                    Image du satellite GOES17, le 06/08/2022 à 09h00 UTC : en zone intertropicale, les
+                                    nuages orageux se forment préférentiellement dans la zone de convergence des alizés
+                                    ou ZCIT, qui en été boréal a tendance à remonter au nord de l'équateur. C'est ici le
+                                    cas avec ces amas nuageux à une latitude proche de celle de la frontière sud du
+                                    Mexique. Le système le plus proche de la côte mexicaine a une forte probabilité de
+                                    dégénérer en dépression tropicale sous 48 heures. Se dirigeant vers
+                                    l'ouest-nord-ouest, il devrait rester à bonne distance de la côte.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Empty card -->
+                    <div class="empty"></div>
+                    <!-- Cards -->
+                    <div class="card" id="card_prevention">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/prevention_noyade-345x180.jpg" alt="Questions">
+                        </div>
+                        <div class="card_txt">
+                            <strong> Prévention des noyades</strong>
+                            <p>Pour votre sécurité, renseignez-vous sur les bonnes pratiques à adopter.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" id="card_securite">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/carte_vigilance.png" alt="Température">
+                        </div>
+                        <div class="card_txt">
+                            <strong>Pour votre sécurité, renseignez-vous sur les bonnes pratiques à adopter.</strong>
+                            <p>Pendant les fortes chaleurs, protégez-vous ! Restez au frais, buvez de l'eau, ...</p>
+                        </div>
+                    </div>
+                    <div class="card card_solo" id="card_soraya">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/teaser_MF_345x255_Soraya_3.jpg" alt="Température">
+                            <div class="pastille">Prévention</div>
+                        </div>
+                    </div>
+
+                    <!-- cards_Article Img & Videos -->
+                    <div class="article cards_article_videos" id="block_article_video">
+                        <h2>
+                            <i class="fa fa-file-video" aria-hidden="true"></i>
+                            <span>Images & vidéos</span>
+                        </h2>
+                        <div class="row_main">
+                            <div class="article_img">
+                                <!-- width="629" height="347" -->
+                                <iframe src="https://www.youtube.com/embed/SDyc-zcpnt0"
+                                    title="Comment anticiper un épisode de canicule ?" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="article_menu">
+                                <nav class="article_menu_options">
+                                    <div class="nav_article_video nav-active" id="nav1">
+                                        <i class="fa fa-heart" aria-hidden="true">
+                                            <p>Recommandées</p>
+                                        </i>
+
+                                        <div class="underliner"></div>
+                                    </div>
+                                    <div class="nav_article_video" id="nav1">
+                                        <i class="fa fa-clock-o" aria-hidden="true">
+                                            <p>Récents</p>
+                                        </i>
+                                        <div class="underliner"></div>
+                                    </div>
+                                    <div class="nav_article_video" id="nav1">
+                                        <i class="fa fa-users" aria-hidden="true">
+                                            <p>Populaires</p>
+                                        </i>
+                                        <div class="underliner"></div>
+                                    </div>
+                                </nav>
+                                <ul class="article_menu_content">
+                                    <li id="menu_content-1">
+                                        <div class="img_container">
+                                            <img src="./assets/img/articles/0_utube.jpg" alt="menu_content-1">
+                                        </div>
+                                        <p>Comment prévoir les canicules</p>
+                                    </li>
+                                    <li id="menu_content-2">
+                                        <div class="img_container">
+                                            <img src="./assets/img/articles/0_usines.jpg" alt="menu_content-2">
+                                        </div>
+                                        <p>Rapport du GIEC 2021 : chaque degré compte</p>
+                                    </li>
+                                    <li id="menu_content-3">
+                                        <div class="img_container">
+                                            <img src="./assets/img/articles/0_graph.jpg" alt="menu_content-3">
+                                        </div>
+                                        <p>Météo-France éclaire le climat jusqu'en 2100</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cards -->
+                    <div class="card" id="block_card6">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/GettyImages-1287600234.jpg" alt="Entretiens">
+                            <div class="pastille">Entretiens</div>
+                        </div>
+                        <div class="card_txt">
+                            <strong>Virginie Schwarz : « Météo-France informe sur l’évolution possible du climat en
+                                France, à l’échelle des territoires »</strong>
+                            <p>Météo-France livre de nouvelles projections...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" id="block_card7">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/SecheresseGettyImages-952530874.jpg"
+                                alt="Changement climatique">
+                            <div class="pastille">Changement climatique</div>
+                        </div>
+                        <div class="card_txt">
+                            <strong>Sécheresses et changement climatique</strong>
+                            <p>Le changement climatique, du fait de l’augmentation de l’évaporation liée à la hausse des
+                                températures, renforce l’intensité et la durée des sécheresses des sols.</p>
+                        </div>
+                    </div>
+                    <div class="empty">
+                    </div>
+                    <!-- Cards suite -->
+                    <div class="card" id="block_card8">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/GettyImages-CANICULE 500_2.jpg" alt="évènements">
+                            <div class="pastille">évènements</div>
+                        </div>
+                        <div class="card_txt">
+                            <strong>Été 2019 : deux canicules exceptionnelles</strong>
+                            <p class="date">05/03/2020</p>
+                            <p>L'été 2019 a été marqué par deux vagues de chaleur assez courtes (6 jours) mais d'une
+                                intensité record...
+                            </p>
+                            <div class="suite">
+                                <p>LIRE LA SUITE</p>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="block_card9">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/canciule christophe_0.JPG" alt="Changement climatique">
+                            <div class="pastille">Changement climatique</div>
+                        </div>
+                        <div class="card_txt">
+                            <strong>Le changement climatique en France</strong>
+                            <p class="date">05/03/2020</p>
+                            <p>En France métropolitaine, le climat a évolué depuis le milieu du XXᵉ siècle sous l’effet
+                                du changement...</p>
+                            <div class="suite">
+                                <p>LIRE LA SUITE</p>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="block_card10">
+                        <div class="img_container">
+                            <img src="./assets/img/articles/image0.jpeg" alt="Changement climatique">
+                            <div class="pastille">Changement climatique</div>
+                        </div>
+                        <div class="card_txt">
+                            <strong>Les villes face au changement climatique</strong>
+                            <p class="date">05/03/2020</p>
+                            <p>Le milieu urbain est particulièrement sensible aux impacts du changement climatique,
+                                notamment...</p>
+                            <div class="suite">
+                                <p>LIRE LA SUITE</p>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button more -->
+                    <div class="row_full">
+                        <button id="btn_more">
+                            <p>Plus d'actualités</p>
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </aside>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="top20">
+                <h2>Top 20 des villes les plus consultées</h2>
+                <div class="cities">
+                    <ul>
+                        <li> METEO PARIS</li>
+                        <li> METEO TOULOUSE</li>
+                        <li> METEO LYON</li>
+                        <li> METEO BORDEAUX</li>
+                        <li> METEO NANTES</li>
+                        <li> METEO MONTPELLIER</li>
+                        <li> METEO RENNES</li>
+                        <li> METEO MARSEILLE</li>
+                        <li> METEO LILLE</li>
+                        <li> METEO ANGERS</li>
+                        <li> METEO GRENOBLE</li>
+                        <li> METEO TOURS</li>
+                        <li> METEO DIJON</li>
+                        <li> METEO LIMOGES</li>
+                        <li> METEO PAU</li>
+                        <li> METEO STRASBOURG</li>
+                        <li> METEO NANCY</li>
+                        <li> METEO BREST</li>
+                        <li> METEO BESANCON</li>
+                        <li> METEO LE MANS</li>
+                    </ul>
+                </div>
+                <h2>Votre météo en outre-mer</h2>
+                <div class="outre-mer">
+                    <ul>
+                        <li>METEO GUADELOUPE & ILES DU NORD</li>
+                        <li>METEO MARTINIQUE</li>
+                        <li>METEO GUYANE</li>
+                        <li>METEO LA REUNION</li>
+                        <li>METEO MAYOTTE</li>
+                        <li>METEO NOUVELLE CALEDONIE</li>
+                        <li>METEO WALLIS & FUTUNA</li>
+                        <li>METEO POLYNESIE FRANCAISE</li>
+                        <li>METEO SAINT PIERRE ET MIQUELON</li>
+                    </ul>
+                </div>
+
+                <div class="social_icons">
+                    <div class="social_round">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </div>
+                    <div class="social_round">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </div>
+                    <div class="social_round">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </div>
+                    <div class="social_round">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <div class="social_round">
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="mini_menus">
+                    <ul>
+                        <li>Légende</li>
+                        <li>Mentions Légales</li>
+                        <li>Gestion des Cookies</li>
+                        <li>Politique de Confidentialité</li>
+                        <li>Droits de Reproduction</li>
+                        <li>Consentement</li>
+                        <li>Accessibilité</li>
+                        <li>Autres Sites</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer_logos">
+                <img class="logo" src="./assets/img/marianne.svg" alt="République Française">
+                <a href="#">
+                    <img class="logo" src="./assets/img/logo_small_0.png" alt="Météo France">
+                </a>
+            </div>
+            <div class="copyright">
+                © 2022 Copyright -&nbsp; <a href="#">Météo-France</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
